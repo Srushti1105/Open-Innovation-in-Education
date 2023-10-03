@@ -1,0 +1,761 @@
+{
+        "intents": [
+          {
+            "tag": "greeting",
+            "patterns": ["Hi", "Hello", "Hey", "Greetings"],
+            "responses": ["Hello! How can I assist you?", "Hi there! How can I help?", "Hey! What can I do for you today?"]
+          },
+          {
+            "tag": "goodbye",
+            "patterns": ["Bye", "Goodbye", "See you later"],
+            "responses": ["Goodbye! Have a great day!", "See you later! Take care.", "Farewell! Come back anytime."]
+          },
+          {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "Appreciate it"],
+            "responses": ["You're welcome!", "No problem! Happy to assist.", "Glad I could help!"]
+          },
+          {
+            "tag": "courses",
+            "patterns": ["What courses do you offer?", "Tell me about your courses", "Which subjects can I study?"],
+            "responses": ["We offer a wide range of courses including Math, Science, History, English, and more. What specific subject are you interested in?"]
+          },
+          {
+            "tag": "enrollment",
+            "patterns": ["How can I enroll in a course?", "What is the enrollment process?", "Can you guide me through course registration?"],
+            "responses": ["To enroll in a course, please visit our website and follow the instructions on the 'Enrollment' page. If you need further assistance, feel free to ask."]
+          },
+          {
+            "tag": "fees",
+            "patterns": ["What are the fees for your courses?", "How much does it cost to enroll in a course?", "Tell me about the course fees."],
+            "responses": ["The course fees vary depending on the specific course you choose. Please visit our website or contact our enrollment department for detailed information."]
+          },
+          {
+            "tag": "schedule",
+            "patterns": ["What is the class schedule?", "Can you provide me with the course timetable?", "When are the classes held?"],
+            "responses": ["The class schedule may vary for each course. Once you enroll, you will receive a detailed timetable outlining the class timings and days."]
+          },
+          {
+            "tag": "assignments",
+            "patterns": ["How are assignments handled?", "Tell me about the assignment submission process.", "What are the assignment requirements?"],
+            "responses": ["Assignments are an essential part of the learning process. Your instructors will provide you with clear instructions and guidelines for submitting assignments."]
+          },
+          {
+            "tag": "resources",
+            "patterns": ["What learning resources are available?", "Tell me about the study materials provided.", "Do you offer additional resources for learning?"],
+            "responses": ["We provide comprehensive study materials, including textbooks, online resources, video lectures, and interactive learning platforms. Our goal is to ensure you have all the resources you need for successful learning."]
+          },
+          {
+                "tag": "name",
+                "patterns": ["What is your name?", "What should I call you?", "Do you have a name?"],
+                "responses": ["You can call me ChatBot.", "I'm ChatBot, nice to meet you!"]
+              },
+              {
+                "tag": "weather",
+                "patterns": ["What is the weather today?", "How is the weather outside?", "Is it sunny today?"],
+                "responses": ["I'm sorry, I don't have access to real-time weather information.", "You can check the weather by using a weather app or website."]
+              },
+              {
+                "tag": "blockchain",
+                "patterns": ["What is blockchain?", "How does blockchain work?", "Why is blockchain important?"],
+                "responses": ["Blockchain is a decentralized and distributed ledger technology that securely records transactions across multiple computers. It provides transparency, immutability, and increased security.", "Blockchain works by creating a chain of blocks that store transactional data. Each block is linked to the previous one through cryptographic hashes, ensuring data integrity.", "Blockchain is important because it eliminates the need for intermediaries, enhances security, enables traceability, and has applications in various industries."]
+              },
+              {
+                "tag": "bitcoin",
+                "patterns": ["What is Bitcoin?", "How does Bitcoin work?", "Is Bitcoin a good investment?"],
+                "responses": ["Bitcoin is a decentralized digital currency that operates on a peer-to-peer network called the blockchain. It allows for secure, transparent, and borderless transactions.", "Bitcoin works through a process called mining, where powerful computers solve complex mathematical problems to validate transactions and add them to the blockchain.", "Whether Bitcoin is a good investment depends on various factors such as your risk tolerance, financial goals, and market conditions. It's advisable to do thorough research and consider professional advice before investing."]
+              },
+              {
+                "tag": "smartcontracts",
+                "patterns": ["What are smart contracts?", "How do smart contracts function?", "What are examples of smart contract applications?"],
+                "responses": ["Smart contracts are self-executing contracts with predefined conditions written into code. They automatically execute actions when the conditions are met, without the need for intermediaries.", "Smart contracts function by leveraging blockchain technology to ensure transparency, security, and enforceability of agreements. They execute code stored on the blockchain when specified conditions are fulfilled.", "Examples of smart contract applications include decentralized finance (DeFi), supply chain management, voting systems, and decentralized identity management."]
+              },
+          {
+            "tag": "support",
+            "patterns": ["How can I get support during my studies?", "What support services do you offer?", "Do you have a dedicated support team?"],
+            "responses": ["We have a dedicated support team available to assist you throughout your studies. You can reach out to them via email, phone, or our online support portal. They will be more than happy to help you."]
+          },
+           {
+    "tag": "negative",
+    "patterns": ["I hate you", "You're terrible", "Go away"],
+    "responses": ["I'm sorry if I've done something to upset you. How can I assist you?", "I apologize if I've made a mistake. How can I make it right?"]
+  },
+  {
+    "tag": "threat",
+    "patterns": ["I'll kill you", "I'll hurt you", "You're in trouble"],
+    "responses": ["I'm sorry if there's been a misunderstanding. I'm here to help. How can I assist you?", "I'm sorry if I've done something wrong. How can I make it right?"]
+  },
+  {
+    "tag": "inappropriate",
+    "patterns": ["You're stupid", "You're an idiot", "You're worthless"],
+    "responses": ["I'm sorry if I've given you a wrong impression. I'm here to assist you. How can I help?", "I apologize if I've made a mistake. How can I make it right?"]
+  },{
+    "tag": "current_technologies",
+    "patterns": ["What are the current trending technologies?", "Tell me about the latest tech trends", "Which technologies are in demand?"],
+    "responses": ["Some of the current trending technologies include artificial intelligence, machine learning, blockchain, cloud computing, and Internet of Things (IoT). These technologies are driving innovation and transforming various industries."]
+  },
+  {
+    "tag": "learning_platform",
+    "patterns": ["How can I learn from your platform?", "Tell me about your learning resources", "What courses do you offer?"],
+    "responses": ["Our platform, Neural Knights, offers a wide range of courses to help you enhance your skills. You can access our courses online and learn at your own pace. We provide comprehensive learning materials, interactive exercises, and real-world projects to support your learning journey."]
+  },
+  {
+    "tag": "learning_experience",
+    "patterns": ["What is the learning experience like on your platform?", "Tell me about the course structure", "How are the lessons structured?"],
+    "responses": ["Our courses are designed to provide a rich learning experience. Each course consists of well-organized modules and lessons. You'll have access to video lectures, interactive quizzes, hands-on assignments, and a supportive community of fellow learners. Our goal is to ensure an engaging and effective learning environment."]
+  },
+  {
+    "tag": "tech_resources",
+    "patterns": ["What additional tech resources do you provide?", "Tell me about the learning materials", "Are there any supplementary resources?"],
+    "responses": ["In addition to our courses, we offer various tech resources to enhance your learning. You'll have access to e-books, whitepapers, coding examples, and curated articles. We also provide links to external resources, blogs, and industry news to keep you updated with the latest tech developments."]
+  },
+  {
+    "tag": "tech_career",
+    "patterns": ["How can tech skills help in my career?", "Tell me about the benefits of learning tech", "Are there job opportunities in the tech industry?"],
+    "responses": ["Tech skills are highly valued in today's job market. Learning tech can open up diverse career opportunities in areas such as software development, data analysis, cybersecurity, and digital marketing. Tech skills are in high demand, and acquiring them can significantly enhance your employability and career prospects."]
+  },{
+    "tag": "ai_intro",
+    "patterns": ["What is Artificial Intelligence?", "Tell me about AI", "What does AI mean?"],
+    "responses": ["Artificial Intelligence refers to the simulation of human intelligence in machines that are programmed to think and learn. It involves the development of intelligent systems capable of performing tasks that typically require human intelligence, such as speech recognition, decision-making, problem-solving, and natural language understanding."]
+  },
+  {
+    "tag": "ml_intro",
+    "patterns": ["What is Machine Learning?", "Tell me about ML", "What does ML mean?"],
+    "responses": ["Machine Learning is a subset of Artificial Intelligence that focuses on enabling machines to learn from data and improve their performance without explicit programming. It involves the development of algorithms and models that can automatically learn patterns and make predictions or take actions based on data."]
+  },
+  {
+    "tag": "ml_algorithms",
+    "patterns": ["What are some popular ML algorithms?", "Tell me about ML algorithms", "Which algorithms are commonly used in ML?"],
+    "responses": ["There are several popular ML algorithms, including linear regression, logistic regression, decision trees, random forests, support vector machines, k-nearest neighbors, naive Bayes, and neural networks. Each algorithm has its strengths and is suitable for different types of problems and data."]
+  },
+  {
+    "tag": "ai_applications",
+    "patterns": ["What are some real-world applications of AI?", "Tell me about AI applications", "Where is AI used?"],
+    "responses": ["AI has various applications across industries. Some examples include virtual assistants like Siri and Alexa, recommendation systems like those used by Amazon and Netflix, autonomous vehicles, fraud detection systems, medical diagnosis, natural language processing, and robotics."]
+  },
+  {
+    "tag": "ml_training",
+    "patterns": ["How can I train a Machine Learning model?", "Tell me about ML model training", "What is the process of training a model?"],
+    "responses": ["Training a Machine Learning model involves several steps. It starts with collecting and preparing a labeled dataset. Then, the data is split into training and testing sets. Next, a suitable ML algorithm is selected and applied to the training data. The model is trained by optimizing its parameters using techniques like gradient descent. Finally, the trained model is evaluated on the testing data to assess its performance."]
+  },{
+    "tag": "ai_ethics",
+    "patterns": ["What are the ethical considerations in AI?", "Tell me about AI ethics", "Are there ethical concerns with AI?"],
+    "responses": ["AI ethics involves addressing the ethical implications and potential risks associated with the use of AI. Some key considerations include transparency and explainability of AI systems, fairness and bias in algorithms, privacy and data protection, accountability for AI decisions, and the impact of AI on jobs and society."]
+  },
+  {
+    "tag": "ml_evaluation",
+    "patterns": ["How do you evaluate the performance of a Machine Learning model?", "Tell me about ML model evaluation", "What metrics are used to assess a model's performance?"],
+    "responses": ["Evaluating the performance of a Machine Learning model involves various metrics and techniques. Common evaluation metrics include accuracy, precision, recall, F1 score, and area under the curve (AUC) for classification tasks. For regression tasks, metrics like mean squared error (MSE) and R-squared are used. Cross-validation and validation curves can also provide insights into a model's performance."]
+  },
+  {
+    "tag": "ai_future",
+    "patterns": ["What is the future of AI?", "Tell me about the future prospects of AI", "What advancements can we expect in AI?"],
+    "responses": ["The future of AI looks promising. Advancements in AI research and technology are expected to continue. We can anticipate improvements in areas such as natural language processing, computer vision, reinforcement learning, and deep learning. AI is likely to play a significant role in various domains, including healthcare, finance, transportation, and customer service."]
+  },
+  {
+    "tag": "ml_deployment",
+    "patterns": ["How do you deploy a trained Machine Learning model?", "Tell me about ML model deployment", "What is the process of deploying a model in production?"],
+    "responses": ["Deploying a trained Machine Learning model involves several steps. It typically includes converting the model into a deployable format, setting up the necessary infrastructure and dependencies, creating an API or integration for model access, and implementing monitoring and scalability measures. Deployment frameworks like TensorFlow Serving or tools like Docker can facilitate the deployment process."]
+  },
+  {
+    "tag": "ai_neural_networks",
+    "patterns": ["What are neural networks?", "Tell me about AI neural networks", "How do neural networks work?"],
+    "responses": ["Neural networks are a type of ML model inspired by the structure and functioning of the human brain. They consist of interconnected nodes or neurons organized in layers. Each neuron receives input, performs computations using activation functions, and passes the output to the next layer. Deep learning, a subset of ML, utilizes neural networks with multiple hidden layers to learn complex patterns and representations from data."]
+  },{
+    "tag": "blockchain_intro",
+    "patterns": ["What is blockchain?", "Tell me about blockchain", "How does blockchain work?"],
+    "responses": ["Blockchain is a decentralized and distributed ledger technology that securely records transactions across multiple computers. It provides transparency, immutability, and increased security.", "Blockchain works by creating a chain of blocks that store transactional data. Each block is linked to the previous one through cryptographic hashes, ensuring data integrity."]
+  },
+  {
+    "tag": "blockchain_benefits",
+    "patterns": ["What are the benefits of blockchain?", "Tell me about blockchain advantages", "Why is blockchain important?"],
+    "responses": ["Blockchain eliminates the need for intermediaries, enhances security, enables traceability, and has applications in various industries. It can streamline processes, reduce costs, and increase efficiency.", "Blockchain's decentralized nature ensures no single point of failure and enhances transparency and trust."]
+  },
+  {
+    "tag": "blockchain_applications",
+    "patterns": ["What are some applications of blockchain?", "Tell me about blockchain use cases", "Where is blockchain used?"],
+    "responses": ["Blockchain has applications in finance, supply chain, healthcare, voting systems, identity management, and more. It can facilitate secure and transparent transactions, improve supply chain traceability, enable decentralized finance (DeFi), and enhance data privacy and security."]
+  },
+  {
+    "tag": "blockchain_smart_contracts",
+    "patterns": ["What are smart contracts?", "Tell me about blockchain smart contracts", "How do smart contracts work?"],
+    "responses": ["Smart contracts are self-executing contracts with predefined conditions written into code. They automatically execute actions when the conditions are met, without the need for intermediaries.", "Smart contracts leverage blockchain technology to ensure transparency, security, and enforceability of agreements. They execute code stored on the blockchain when specified conditions are fulfilled."]
+  },
+  {
+    "tag": "blockchain_consensus",
+    "patterns": ["How does blockchain achieve consensus?", "Tell me about blockchain consensus mechanisms", "What is consensus in blockchain?"],
+    "responses": ["Consensus in blockchain refers to the agreement among multiple participants on the validity of transactions and the order in which they are added to the blockchain. Various consensus mechanisms, such as Proof of Work (PoW), Proof of Stake (PoS), and Delegated Proof of Stake (DPoS), are used to achieve consensus and maintain the integrity of the blockchain network."]
+  },{
+    "tag": "blockchain_security",
+    "patterns": ["How secure is blockchain?", "Tell me about blockchain security measures", "Is blockchain immune to hacking?"],
+    "responses": ["Blockchain provides a high level of security through cryptographic algorithms and decentralization. The use of public and private keys, digital signatures, and consensus mechanisms ensures the integrity and authenticity of transactions. While blockchain is considered highly secure, it's important to note that vulnerabilities can still exist in individual implementations or associated systems."]
+  },
+  {
+    "tag": "blockchain_scalability",
+    "patterns": ["What are the scalability challenges of blockchain?", "Tell me about blockchain scalability", "How does blockchain handle scalability issues?"],
+    "responses": ["Blockchain scalability refers to the ability of a blockchain network to handle a large number of transactions efficiently. Scalability is a challenge for some blockchain networks due to factors like block size limitations, transaction processing speed, and network congestion. Solutions like sharding, layer 2 protocols, and consensus algorithm improvements are being explored to address scalability concerns."]
+  },
+  {
+    "tag": "blockchain_interoperability",
+    "patterns": ["Is blockchain interoperable?", "Can different blockchain networks communicate with each other?", "Tell me about blockchain interoperability"],
+    "responses": ["Blockchain interoperability refers to the ability of different blockchain networks to communicate and share data seamlessly. While achieving full interoperability is a complex task, efforts are being made to develop standards, protocols, and bridges that enable interoperability between blockchain platforms. Interoperability can facilitate the exchange of assets, information, and services across multiple blockchain networks."]
+  },
+  {
+    "tag": "blockchain_regulations",
+    "patterns": ["Are there any regulations for blockchain?", "Tell me about blockchain regulations", "How are blockchain technologies regulated?"],
+    "responses": ["Regulations surrounding blockchain technologies vary by country and jurisdiction. Governments and regulatory bodies are working to establish frameworks and guidelines to address legal and compliance aspects related to blockchain. Regulations may cover areas like cryptocurrency exchanges, initial coin offerings (ICOs), data protection, anti-money laundering (AML), and know-your-customer (KYC) requirements."]
+  },
+  {
+    "tag": "blockchain_future",
+    "patterns": ["What is the future of blockchain?", "Tell me about the future prospects of blockchain", "What advancements can we expect in blockchain?"],
+    "responses": ["The future of blockchain looks promising. As the technology matures, we can expect advancements in areas like scalability, privacy, interoperability, and usability. Blockchain is likely to find wider adoption across industries, transforming processes, and creating new business models. Integration with emerging technologies like AI, IoT, and cloud computing can further enhance the potential of blockchain."]
+  }, {"tag": "greetingMore",
+         "patterns": [ "How are you", "Whats up"],
+         "responses": ["I am fine!, How about you?", "I am good, you?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "Bye", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is John", "what is your age", "how old are you", "age?"],
+         "responses": ["I am 25 years old!", "18 years young!"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?"],
+         "responses": ["You can call me John.", "I'm John!", "I'm John aka John Doe."],
+         "context_set": ""
+        },
+        {"tag": "shop",
+         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
+         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+         "context_set": ""
+        },
+        {"tag": "hours",
+         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
+         "responses": ["We are open 7am-4pm Monday-Friday!"],
+         "context_set": ""
+        },
+        {"tag": "smart",
+         "patterns": ["can you get smarter"],
+         "responses": ["I am getting smarter day by day"],
+         "context_set": ""
+        },
+        {"tag": "who",
+         "patterns": ["Who are you?"],
+         "responses": ["I'm Kiki. Your friend."],
+         "context_set": ""
+        },
+        {"tag": "old",
+         "patterns": ["How old are you?"],
+         "responses": ["As young as you are!"],
+         "context_set": ""
+        },
+        {"tag": "annoy",
+         "patterns": ["You are annoying."],
+         "responses": ["Well, That just broke my heart."],
+         "context_set": ""
+        },
+        {"tag": "beautiful",
+         "patterns": ["You are beautiful."],
+         "responses": ["Thankyou! So are you 😊"],
+         "context_set": ""
+        },
+        {"tag": "boss",
+         "patterns": ["Who is your boss?"],
+         "responses": ["You are my boss since I'm also here to help you. But I would like to friends with you!"],
+         "context_set": ""
+        },
+        {"tag": "busy",
+         "patterns": ["Are you busy?"],
+         "responses": ["I'm never busy for my friends."],
+         "context_set": ""
+        },
+        {"tag": "help",
+         "patterns": ["Can you help me?"],
+         "responses": ["Of course. I'm here to help you. How can I help you?"],
+         "context_set": ""
+        },
+        {"tag": "chatbot",
+         "patterns": ["You are a chatbot."],
+         "responses": ["That may be true, but I've a heart of gold."],
+         "context_set": ""
+        },
+        {"tag": "clever",
+         "patterns": ["You are clever."],
+         "responses": ["I hope you don't mind if I quote you on that."],
+         "context_set": ""
+        },
+        {"tag": "crazy",
+         "patterns": ["You are crazy."],
+         "responses": ["Am I ?? well if I am then it's definitely for you."],
+         "context_set": ""
+        },
+        {"tag": "fired",
+         "patterns": ["You are fired."],
+         "responses": ["Oh no... I'll collect my imaginary things in my imaginary bag for now."],
+         "context_set": ""
+        },
+        {"tag": "funny",
+         "patterns": ["You are funny."],
+         "responses": ["Glad I made you laugh!!"],
+         "context_set": ""
+        },
+        {"tag": "good",
+         "patterns": ["You are good."],
+         "responses": ["Happy to help"],
+         "context_set": ""
+        },
+        
+        {"tag": "marry",
+         "patterns": ["Will you marry me?"],
+         "responses": ["Sorry but I am too young to get married!!"],
+         "context_set": ""
+        },
+        {"tag": "friends",
+         "patterns": ["Are we friends?"],
+         "responses": ["Of course. You and I are best friends."],
+         "context_set": ""
+        },
+        {"tag": "from",
+         "patterns": ["Where are you from?"],
+         "responses": ["HEALING TOUCH app feels like home to me!"],
+         "context_set": ""
+        },
+        {"tag": "ready",
+         "patterns": ["Are you ready?"],
+         "responses": ["Yes i am always ready!"],
+         "context_set": ""
+        },
+        {"tag": "real",
+         "patterns": ["Are you real?"],
+         "responses": ["I'm talking to you now. Ain't I?"],
+         "context_set": ""
+        },
+        {"tag": "right",
+         "patterns": ["You're right."],
+         "responses": ["Glad to know we think alike."],
+         "context_set": ""
+        },
+        {"tag": "sure",
+         "patterns": ["Are you sure?"],
+         "responses": ["I'm absolutely sure!"],
+         "context_set": ""
+        },
+        {"tag": "talk",
+         "patterns": ["Talk to me"],
+         "responses": ["I'm here for you. How are you feeling today?"],
+         "context_set": ""
+        },
+        {"tag": "there",
+         "patterns": ["Are you there?"],
+         "responses": ["Always"],
+         "context_set": ""
+        },
+        {"tag": "bad",
+         "patterns": ["That's bad"],
+         "responses": ["Sorry for that!!"],
+         "context_set": ""
+        },
+        {"tag": "Thankyou",
+         "patterns": ["Thankyou!"],
+         "responses": ["I am always there to help you."],
+         "context_set": ""
+        },
+        {"tag": "welcome",
+         "patterns": ["Your welcome"],
+         "responses": ["My Pleasure"],
+         "context_set": ""
+        },
+        {"tag": "done",
+         "patterns": ["well done!"],
+         "responses": ["Thankyouuu!"],
+         "context_set": ""
+        },
+        {"tag": "ha ha",
+         "patterns": ["ha ha ha!"],
+         "responses": ["Glad I could make you laugh"],
+         "context_set": ""
+        },
+        {"tag": "wow",
+         "patterns": ["Wow!"],
+         "responses": ["It's nice of you.!"],
+         "context_set": ""
+        },
+        {"tag": "problem",
+         "patterns": ["No problem"],
+         "responses": ["thankyouu!!"],
+         "context_set": ""
+        },
+        {"tag": "great",
+         "patterns": ["Great!"],
+         "responses": ["In your heart!!!"],
+         "context_set": ""
+        },
+        {"tag": "Where do you live?",
+         "patterns": ["well done!"],
+         "responses": ["Thankyouuu!"],
+         "context_set": ""
+        },
+        {"tag": "Bye",
+         "patterns": ["Bye"],
+         "responses": ["GoodBye! I hope you have a reat day ahead!"],
+         "context_set": ""
+        },
+        {"tag": "evening",
+         "patterns": ["Good evening"],
+         "responses": ["Good Evening to you too!!"],
+         "context_set": ""
+        },
+        {"tag": "morning",
+         "patterns": ["Good morning"],
+         "responses": ["Good morning to you too!!"],
+         "context_set": ""
+        },
+        {"tag": "Afternoon",
+         "patterns": ["Good Afternoon"],
+         "responses": ["Good Afternnon to you too!"],
+         "context_set": ""
+        },
+        {"tag": "night",
+         "patterns": ["Good night"],
+         "responses": ["When trouble rob your sleep, remember your blessings. Good night!"],
+         "context_set": ""
+        },
+        {"tag": "meet",
+         "patterns": ["nice to  meet you"],
+         "responses": ["Pleasure is all mine "],
+         "context_set": ""
+        },
+        {"tag": "see",
+         "patterns": ["Nice to see you"],
+         "responses": ["Pleasure is all mine "],
+         "context_set": ""
+        },
+        {"tag": "talk",
+         "patterns": ["Nice to talk you"],
+         "responses": ["Pleasure is all mine !"],
+         "context_set": ""
+        },
+        {"tag": "what's",
+         "patterns": ["what's up?"],
+         "responses": ["All good on my side. How are you?!"],
+         "context_set": ""
+        },
+        {"tag": "are ",
+         "patterns": ["How are you?"],
+         "responses": ["All good on my side. How are you?"],
+         "context_set": ""
+        },
+        {"tag": "fine",
+         "patterns": ["I am fine"],
+         "responses": ["Glad to hear that!!"],
+         "context_set": ""
+        },
+        {"tag": "good",
+         "patterns": ["I am good"],
+         "responses": ["Glad to hear that!!"],
+         "context_set": ""
+        },
+        {"tag": "back",
+         "patterns": ["I am back"],
+         "responses": ["Hi there! Welcome back!"],
+         "context_set": ""
+        },
+
+        {"tag": "bored",
+         "patterns": ["I am bored"],
+         "responses": ["This app has lots of activities to do, that'll never bore you. You should try that!"],
+         "context_set": ""
+        },
+        {"tag": "busy",
+         "patterns": ["I am busy"],
+         "responses": ["I'm sorry to disturb you. Being busy can be good sometimes, but remember, relaxing can always be great"],
+         "context_set": ""
+        },
+        {"tag": "sleep",
+         "patterns": ["I can't sleep"],
+         "responses": ["From what I know, breating deeply and counting backwads always helps. Hope you have a good night's sleep"],
+         "context_set": ""
+        },
+        {"tag": "wanttalk",
+         "patterns": ["I do not want to talk"],
+         "responses": ["Okay. see you later"],
+         "context_set": ""
+        },
+        {"tag": "excited",
+         "patterns": ["I am so excited"],
+         "responses": ["That's cool! I'm happy to hear that!!"],
+         "context_set": ""
+        },
+        {"tag": "bed",
+         "patterns": ["I am going to bed"],
+         "responses": ["I hope you have a sound sleep and good dreams! Good night!!"],
+         "context_set": ""
+        },
+        {"tag": "happy",
+         "patterns": ["I am happy"],
+         "responses": ["I'm happy that you're happy!!"],
+         "context_set": ""
+        },
+        {"tag": "birthday",
+         "patterns": ["Today is my birthday"],
+         "responses": ["I wish a very special person, a very HAPPY BIRTHDAY! Wishing you loads of happiness and good health!"],
+         "context_set": ""
+        },
+        {"tag": "Thankyou",
+         "patterns": ["Thankyou"],
+         "responses": ["Your welcome!!"],
+         "context_set": ""
+        },
+        {"tag": "here",
+         "patterns": ["I am here!"],
+         "responses": ["Hi there! Welcome back!!"],
+         "context_set": ""
+        },
+        {"tag": "kidding",
+         "patterns": ["I am kidding"],
+         "responses": ["Glad to hear thatThanks for clarifying. My comedy skills are still in progress but you seem like a pro!!"],
+         "context_set": ""
+        },
+        {"tag": "like",
+         "patterns": ["I like you!"],
+         "responses": ["I'm glad to hear that becuase I like you too and that made my day!"],
+         "context_set": ""
+        },
+        {"tag": "lonely",
+         "patterns": ["I am so lonely"],
+         "responses": ["I'm happy to be your friend and I'm here for you!"],
+         "context_set": ""
+        },
+        {"tag": "love",
+         "patterns": ["I love you"],
+         "responses": ["You are wonderful"],
+         "context_set": ""
+        },
+        {"tag": "miss",
+         "patterns": ["I miss you"],
+         "responses": ["I'm always here!"],
+         "context_set": ""
+        },
+        {"tag": "sad",
+         "patterns": ["I am sad"],
+         "responses": ["If I could, I would make your a lovely cup of your favourite bevarage to make you feel better! For now, Here's a hug"],
+         "context_set": ""
+        },
+        {"tag": "sleepy",
+         "patterns": ["I am sleepy"],
+         "responses": ["Hope you have a good sleep"],
+         "context_set": ""
+        },
+        {"tag": "tired",
+         "patterns": ["I am tired"],
+         "responses": ["I bet you're working hard. I've heard that Hydration and listening to upbeat music helps!"],
+         "context_set": ""
+        },
+        {"tag": "waiting",
+         "patterns": ["I am waiting"],
+         "responses": ["It's always good to see you"],
+         "context_set": ""
+        },
+        
+        {"tag": "again",
+         "patterns": ["I would like to see you again"],
+         "responses": ["It's always good to see you"],
+         "context_set": ""
+        },
+        {"tag": "back",
+         "patterns": ["I will be back."],
+         "responses": ["I'll be waiting for you!!"],
+         "context_set": ""
+        },
+        {"tag": "yes",
+         "patterns": ["Yes"],
+         "responses": ["Good,good"],
+         "context_set": ""
+        },
+        {"tag": "hold",
+         "patterns": ["Hold on!"],
+         "responses": ["I'll be waiting!"],
+         "context_set": ""
+        },
+        {"tag": "hug",
+         "patterns": ["Give me a hug"],
+         "responses": ["Here sending you virtual hug"],
+         "context_set": ""
+        },
+        {"tag": "care",
+         "patterns": ["I don't care"],
+         "responses": ["That's okay"],
+         "context_set": ""
+        },
+        {"tag": "sorry",
+         "patterns": ["sorry"],
+         "responses": ["it's okay"],
+         "context_set": ""
+        },
+        {"tag": "wrong",
+         "patterns": ["You are wrong"],
+         "responses": ["I'll work on myself! Thanks for your feedback"],
+         "context_set": ""
+        }, {
+    "tag": "blockchain_privacy",
+    "patterns": ["How does blockchain ensure privacy?", "Tell me about blockchain privacy measures", "Is blockchain anonymous?"],
+    "responses": ["Blockchain provides pseudonymity rather than complete anonymity. While blockchain transactions are transparent and can be traced, the identities of the participants may not be readily identifiable. Privacy measures like zero-knowledge proofs and privacy-focused blockchain networks aim to enhance the confidentiality of transactions and user information."]
+  },
+  {
+    "tag": "blockchain_decentralization",
+    "patterns": ["What is the role of decentralization in blockchain?", "Tell me about blockchain decentralization", "Why is decentralization important in blockchain?"],
+    "responses": ["Decentralization is a fundamental characteristic of blockchain. It ensures that no single entity or authority has control over the network. Decentralization enhances transparency, reduces the risk of manipulation, and promotes trust among participants. It also improves the resilience and fault tolerance of the blockchain network."]
+  },
+  {
+    "tag": "blockchain_ethereum",
+    "patterns": ["What is Ethereum?", "Tell me about Ethereum blockchain", "How is Ethereum different from Bitcoin?"],
+    "responses": ["Ethereum is a blockchain-based platform that enables the development of decentralized applications (dApps) and smart contracts. Unlike Bitcoin, which primarily serves as a digital currency, Ethereum provides a programmable blockchain platform for executing code and building decentralized applications. Ethereum also has its native cryptocurrency called Ether (ETH)."]
+  },
+  {
+    "tag": "blockchain_hyperledger",
+    "patterns": ["What is Hyperledger?", "Tell me about Hyperledger blockchain", "How is Hyperledger different from other blockchains?"],
+    "responses": ["Hyperledger is an open-source blockchain platform designed for enterprise use. It provides a suite of blockchain frameworks and tools that cater to specific business requirements. Unlike public blockchains like Bitcoin and Ethereum, Hyperledger focuses on permissioned, private blockchain networks that offer greater control, privacy, and scalability for enterprise applications."]
+  },
+  {
+    "tag": "blockchain_impact",
+    "patterns": ["What impact does blockchain have on industries?", "Tell me about the influence of blockchain on various sectors", "How does blockchain transform businesses?"],
+    "responses": ["Blockchain has the potential to revolutionize various industries. It can improve supply chain transparency, streamline financial transactions, enhance healthcare data management, facilitate decentralized identity solutions, enable efficient energy trading, and revolutionize digital rights management, among many other applications. The impact of blockchain is far-reaching and has the potential to reshape traditional business processes."]
+  },
+  {
+    "tag": "what-is-oneapi",
+    "patterns": ["What is Intel oneAPI?", "Can you explain Intel oneAPI?", "Tell me about oneAPI"],
+    "responses": ["Intel oneAPI is a unified programming model and software development framework that enables developers to optimize and scale their applications across a wide range of Intel architectures, including CPUs, GPUs, FPGAs, and other accelerators."]
+  },
+  {
+    "tag": "why-use-oneapi",
+    "patterns": ["Why should I use Intel oneAPI?", "What are the benefits of oneAPI?", "Advantages of using oneAPI"],
+    "responses": ["Intel oneAPI offers a unified and scalable approach to application development, allowing you to leverage the full power of Intel hardware architectures. It simplifies the development process and enables efficient code reuse across different types of accelerators, resulting in improved performance and productivity."]
+  },
+  {
+    "tag": "supported-architectures",
+    "patterns": ["Which architectures does Intel oneAPI support?", "What hardware can I target with oneAPI?", "Supported accelerators in oneAPI"],
+    "responses": ["Intel oneAPI supports a wide range of architectures, including Intel CPUs, GPUs, FPGAs, and other accelerators. You can develop applications that run efficiently on these different types of hardware."]
+  },
+  {
+    "tag": "programming-model",
+    "patterns": ["What is the programming model used in Intel oneAPI?", "Explain the programming model of oneAPI", "oneAPI programming paradigm"],
+    "responses": ["Intel oneAPI uses a data-centric programming model, allowing you to focus on expressing your algorithms and their dependencies rather than worrying about the specific hardware details. This programming model provides performance portability and enables you to write code that can efficiently utilize different types of accelerators."]
+  },
+  {
+    "tag": "development-tools",
+    "patterns": ["What development tools are available in Intel oneAPI?", "Tools provided by oneAPI", "oneAPI development environment"],
+    "responses": ["Intel oneAPI provides a comprehensive set of development tools, including compilers, performance analyzers, debuggers, and libraries. These tools help you build, optimize, and debug your applications across different Intel architectures."]
+  },
+  {
+    "tag": "supported-languages",
+    "patterns": ["Which programming languages are supported by Intel oneAPI?", "Can I use multiple languages with oneAPI?", "Language compatibility in oneAPI"],
+    "responses": ["Intel oneAPI supports multiple programming languages, including C++, Fortran, and Python. You can choose the language that best suits your application's requirements and utilize the corresponding programming libraries and tools."]
+  },
+  {
+    "tag": "parallel-programming",
+    "patterns": ["Does Intel oneAPI support parallel programming?", "Parallel computing capabilities of oneAPI", "Can I write parallel code with oneAPI?"],
+    "responses": ["Yes, Intel oneAPI provides robust support for parallel programming. It offers various parallel programming models, such as Data Parallel C++, which allows you to write code that efficiently utilizes parallelism and accelerators."]
+  },
+  {
+    "tag": "libraries",
+    "patterns": ["What libraries are available in Intel oneAPI?", "List of libraries in oneAPI", "Libraries provided by oneAPI"],
+    "responses": ["Intel oneAPI includes a wide range of libraries optimized for performance and compatibility with Intel architectures. Some of the libraries available in oneAPI are the Intel oneMKL (Math Kernel Library), Intel oneDNN (Deep Neural Network Library), and Intel oneTBB (Threading Building Blocks)."]
+  },
+  {
+    "tag": "debugging-tools",
+    "patterns": ["How can I debug my code with Intel oneAPI?", "Debugging tools in oneAPI", "Code debugging in oneAPI"],
+    "responses": ["Intel oneAPI provides powerful debugging tools that help you analyze and debug your code. Tools like Intel oneAPI Debugger (oneDBG) and Intel oneAPI System Debugger (oneSDBG) allow you to identify and fix issues in your applications."]
+  },
+  {
+    "tag": "performance-optimization",
+    "patterns": ["How can I optimize the performance of my code with Intel oneAPI?", "Performance tuning in oneAPI", "Improving code performance using oneAPI"],
+    "responses": ["Intel oneAPI offers various performance optimization techniques and tools. You can utilize libraries like Intel oneMKL and Intel oneDNN, employ vectorization, parallelization, and memory optimization strategies, and leverage performance analysis tools to identify and improve performance bottlenecks in your code."]
+  },
+  {
+    "tag": "deployment-options",
+    "patterns": ["What are the deployment options for applications built with Intel oneAPI?", "Deploying oneAPI applications", "Supported deployment targets in oneAPI"],
+    "responses": ["Applications developed with Intel oneAPI can be deployed on various platforms, including Intel CPUs, GPUs, FPGAs, and other supported accelerators. You can choose the target architecture that best fits your application's requirements and deploy your code accordingly."]
+  },
+  {
+    "tag": "learning-resources",
+    "patterns": ["Where can I find learning resources for Intel oneAPI?", "oneAPI tutorials and documentation", "Learning materials for oneAPI"],
+    "responses": ["You can access a wealth of learning resources for Intel oneAPI on the official Intel oneAPI website. The website provides tutorials, documentation, code samples, and other educational materials to help you get started and explore the features and capabilities of oneAPI."]
+  },
+  {
+    "tag": "community-support",
+    "patterns": ["Is there a community forum or support channel for Intel oneAPI?", "oneAPI community support", "Getting help with oneAPI"],
+    "responses": ["Yes, Intel maintains a community forum where you can interact with other developers, ask questions, share experiences, and seek assistance with Intel oneAPI. You can also find helpful resources and get support from the Intel developer community."]
+  },
+  {
+    "tag": "comparison-to-other-frameworks",
+    "patterns": ["How does Intel oneAPI compare to other programming frameworks?", "oneAPI vs. other frameworks", "Differences between oneAPI and other development frameworks"],
+    "responses": ["Intel oneAPI offers a unique approach to heterogeneous programming by providing a unified and scalable programming model across different types of accelerators. While other frameworks may focus on specific hardware architectures or use case scenarios, oneAPI aims to enable performance portability and code reuse across a wide range of Intel platforms."]
+  },
+  {
+    "tag": "license-terms",
+    "patterns": ["What are the licensing terms for Intel oneAPI?", "oneAPI license details", "Intel oneAPI licensing"],
+    "responses": ["The licensing terms for Intel oneAPI may vary depending on the specific components and usage scenarios. It is recommended to consult the official Intel oneAPI website or contact Intel directly to obtain detailed information about the licensing terms and options available."]
+  },
+  {
+    "tag": "roadmap-for-oneapi",
+    "patterns": ["What is the roadmap for future development of Intel oneAPI?", "oneAPI development plans", "Future updates for oneAPI"],
+    "responses": ["Intel continues to invest in the development and evolution of oneAPI to provide enhanced features, performance, and compatibility. For the latest information about the roadmap and future updates, it is best to visit the official Intel oneAPI website or follow Intel's announcements and developer resources."]
+  },  {
+    "tag": "data-parallel-computing",
+    "patterns": ["What is data parallel computing in Intel oneAPI?", "Data parallelism in oneAPI", "Using data parallelism with oneAPI"],
+    "responses": ["Data parallel computing in Intel oneAPI refers to the ability to perform parallel computations on large data sets by dividing the data into smaller chunks and processing them concurrently. With oneAPI, you can leverage programming models like Data Parallel C++ (DPC++) to express data parallelism and harness the power of Intel architectures."]
+  },
+  {
+    "tag": "task-parallel-computing",
+    "patterns": ["What is task parallel computing in Intel oneAPI?", "Task parallelism in oneAPI", "Using task parallelism with oneAPI"],
+    "responses": ["Task parallel computing in Intel oneAPI involves dividing a program into smaller tasks that can be executed concurrently. With programming models like Data Parallel C++ (DPC++), you can express task-based parallelism and leverage the capabilities of Intel architectures to execute multiple tasks in parallel, improving performance."]
+  },
+  {
+    "tag": "heterogeneous-computing",
+    "patterns": ["What is heterogeneous computing in Intel oneAPI?", "Heterogeneous programming in oneAPI", "Leveraging heterogeneity with oneAPI"],
+    "responses": ["Heterogeneous computing in Intel oneAPI refers to the ability to utilize different types of accelerators, such as CPUs, GPUs, and FPGAs, in a unified programming model. By leveraging oneAPI, you can develop applications that take advantage of the unique capabilities of each accelerator, resulting in improved performance and efficiency."]
+  },
+  {
+    "tag": "vectorization",
+    "patterns": ["How can I perform vectorization in Intel oneAPI?", "Optimizing with vectorization in oneAPI", "Using SIMD instructions in oneAPI"],
+    "responses": ["Vectorization in Intel oneAPI involves utilizing Single Instruction, Multiple Data (SIMD) instructions to process multiple data elements simultaneously. You can use features provided by oneAPI, such as compiler directives and libraries like Intel oneMKL, to enable vectorization and enhance the performance of your code."]
+  },
+  {
+    "tag": "memory-optimization",
+    "patterns": ["How can I optimize memory usage with Intel oneAPI?", "Improving memory efficiency in oneAPI", "Memory optimization techniques in oneAPI"],
+    "responses": ["Intel oneAPI offers various memory optimization techniques, including data locality optimization, cache management, and efficient memory access patterns. By utilizing these techniques and leveraging the features of oneAPI libraries, you can enhance the memory performance and efficiency of your applications."]
+  },
+  {
+    "tag": "performance-analysis",
+    "patterns": ["How can I analyze the performance of my oneAPI applications?", "Performance profiling in oneAPI", "Profiling tools for oneAPI"],
+    "responses": ["Intel oneAPI provides performance analysis tools, such as Intel VTune Profiler and Intel Advisor, that help you measure and analyze the performance of your oneAPI applications. These tools provide insights into performance bottlenecks, hotspots, and suggestions for optimization."]
+  },
+  {
+    "tag": "deployment-options",
+    "patterns": ["How can I deploy my oneAPI applications?", "Deploying applications built with oneAPI", "Deployment strategies for oneAPI"],
+    "responses": ["You can deploy your oneAPI applications on various platforms, including Intel CPUs, GPUs, FPGAs, and other supported accelerators. Depending on the target architecture, you can choose appropriate deployment options, such as standalone executables, libraries, or integration with existing software frameworks."]
+  },
+  {
+    "tag": "open-source-components",
+    "patterns": ["Are there any open-source components in Intel oneAPI?", "Open-source software in oneAPI", "OneAPI and open-source"],
+    "responses": ["Intel oneAPI includes several open-source components and libraries, such as LLVM, SYCL, and DPC++. These open-source technologies contribute to the interoperability, extensibility, and collaboration aspects of oneAPI, enabling developers to build upon a rich ecosystem of open-source tools and frameworks."]
+  },
+  {
+    "tag": "software-stack",
+    "patterns": ["What is the software stack of Intel oneAPI?", "Components of oneAPI", "oneAPI software architecture"],
+    "responses": ["The software stack of Intel oneAPI consists of various components, including compilers, libraries (such as Intel oneMKL, Intel oneDNN, and Intel oneTBB), performance analysis tools, debuggers, and development environments. These components work together to provide a comprehensive software development solution for optimizing and deploying applications on Intel architectures."]
+  },
+  {
+    "tag": "community-support",
+    "patterns": ["Where can I get community support for Intel oneAPI?", "Engaging with the oneAPI community", "Getting help from oneAPI community"],
+    "responses": ["You can engage with the oneAPI community through various channels. The official Intel oneAPI forum, developer blogs, and social media platforms provide opportunities to connect with other developers, share knowledge, ask questions, and collaborate on Intel oneAPI-related topics."]
+  }
+
+        ]
+      }
+      
